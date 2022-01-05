@@ -21,18 +21,25 @@ describe('decorator', function(){
 
     describe('Paint', function(){
 
+        let room
         beforeEach (function(){
-            paint2 = new Paint(10)
-            paint3 = new Paint(5)
-            paint4 = new Paint(5)
+            const paint2 = new Paint(10)
+            const paint3 = new Paint(5)
+            const paint4 = new Paint(5)
             decorator.addPaint(paint2)
             decorator.addPaint(paint3)
             decorator.addPaint(paint4)
+            room = new Room(20)
         })
     
     it('should return total litres of paint', function(){
         const actual = decorator.totalPaint()
         assert.strictEqual(actual, 20)
+    })
+
+    it('should calculate if enough paint', function(){
+        const actual = decorator.enoughPaint(room)
+        assert.strictEqual(actual, true)
     })
 
 
