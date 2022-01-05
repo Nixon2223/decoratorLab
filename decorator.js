@@ -18,4 +18,11 @@ Decorator.prototype.enoughPaint = function (room){
     return this.totalPaint() >= room.area
 }
 
+Decorator.prototype.paintRoom = function (room){
+    if (this.enoughPaint(room) === true){
+        for (paint of paints
+    }
+    
+}
+
 module.exports = Decorator

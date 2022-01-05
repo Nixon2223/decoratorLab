@@ -42,6 +42,12 @@ describe('decorator', function(){
         assert.strictEqual(actual, true)
     })
 
+    it('should paint room if enough paint', function(){
+        decorator.paintRoom(room)
+        assert.strictEqual(decorator.totalPaint(), 0)
+        assert.strictEqual(room.painted, true)
+    })
+
 
     })
 })
